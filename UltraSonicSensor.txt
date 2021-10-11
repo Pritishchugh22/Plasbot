@@ -1,0 +1,46 @@
+import time
+import RPi.GPIO as GP
+Set the pins in the RPI
+Set GPIO pin mode to BCM numbering
+
+NOW To find the distance of the object using sensor 1:
+  Set avgDistance=0
+  Loop for i in range(5):
+  Set GPIO output as (TRIG, False)
+  Set time.sleep() as 0.1
+
+  Set GPIO output as (TRIG, True)
+  Set time.sleep() as (0.00001)
+  GPIO.output(TRIG, False)
+
+  loop while GPIO.input(ECHO)==0:
+       Set GPIO output (led, False)
+  Set pulse_start as time.time()
+
+  Loop while GPIO.input(ECHO) is equal to 1:
+      #Check whether the ECHO is HIGH
+       Set GPIO outputas (led, False) 
+  Set pulse_end as time.time()
+  Set pulse_duration as pulse_end - pulse_start
+
+  Set distance as pulse_duration * 17150
+  Set distance as round(distance,2)
+  Set avgDistance1 as avgDistance+distance
+
+Similarly we will find the distance for sensor 2
+ Now:
+ if avgDistance1 is equal to avgDistance2:
+    set count as count+1
+    Apply stop()
+    Set time.sleep() as 1
+    Apply back()
+    Set time.sleep() as (1.5)
+    if (count%3 is equal to 1) and (flag is equal to 0):
+     Apply right()
+     Set flag as 1
+    else:
+     Apply left()
+     Set flag as 0
+    Set time.sleep() as (1.5)
+    Apply stop()
+    Set time.sleep() as (1)

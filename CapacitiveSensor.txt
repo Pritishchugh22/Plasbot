@@ -1,0 +1,29 @@
+import time
+import RPi.GPIO as GP
+Set the pins in the RPI
+Set GPIO pin mode to BCM numbering
+Set state as LOW
+Define variable value
+while(true):
+	Set Value as digitalRead(limitswitch)
+	if value is not equal to state:
+	  Set state as value;
+	  print "sensor value ="
+	  if state is equal to 0:
+	    print "target detected" 
+	    set count as count+1
+    	    Apply stop()
+            Set time.sleep() as 1
+            Apply back()
+            Set time.sleep() as (1.5)
+            if (count%3 is equal to 1) and (flag is equal to 0):
+            	Apply right()
+            	Set flag as 1
+            else:
+     		Apply left()
+     		Set flag as 0
+    	    Set time.sleep() as (1.5)
+            Apply stop()
+            Set time.sleep() as (1)
+   	  else:
+	    print "No target detected" 

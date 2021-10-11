@@ -1,0 +1,60 @@
+import bluetooth
+import time
+import RPi.GPIO as GP
+Set the pins in the RPI
+Set GPIO pin mode to BCM numbering
+Let left motor = L_M and right motor = R_M
+Set s_soc as bluetooth.BluetoothSocket( bluetooth.RFCOMM ) and set s_soc.bind() as ("",port) and 
+s_soc.listen() as 1
+define the forward and backward functions such as forward, forward left, forward right, backward, backward left, backward right
+define Forward():
+    Set GPIO output for l_M A pin as 1
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M A pin as 1    
+
+define Backward():
+    Set GPIO output for l_M A pin as 0
+    Set GPIO output for l_M B pin as 1
+    Set GPIO output for l_M B pin as 1
+    Set GPIO output for l_M A pin as 0 
+define Left():
+    Set GPIO output for l_M A pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M A pin as 1 
+define Right():
+    Set GPIO output for l_M A pin as 1
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M A pin as 0
+define Stop():
+    Set GPIO output for l_M A pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M B pin as 0
+    Set GPIO output for l_M A pin as 0 
+while(true){
+    Set character as client_socket.recv(1024)
+    print ("Received: %s") % character
+    if character is equal to "F": # Moving Forward
+        Forward()
+    elif character is equal to "B": #Moving Backward
+        Backward()
+    elif character is equal to "L": #Turning Left
+        Left()
+        time.sleep(1)
+        Stop()
+    elif character is equal to "R": #Turning Right
+        Right()
+        time.sleep(1)
+        Stop()
+    elif character is equal to "C": #Rotating Clockwise
+        Right()
+    elif character is equal to "A":  #Rotating Anticlockwise
+        Left()
+    elif data is equal to "S":    #Robot Stop
+        Stop()
+
+close client_socket
+close server_socket
+

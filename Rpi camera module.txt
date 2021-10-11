@@ -1,0 +1,29 @@
+1.	Enable the camera port
+2.	Enable the VNC server
+3.	Download the pi-camera-stream-flash
+4.	It installs the camera.py which gives access to the Rpi camera module that is,
+	import cv2
+	from imutils.video.pivideostream import PiVideoStream
+	import imutils
+	import time
+	import numpy as np
+	
+	define class VideoCamera(object):
+	    define __init__(self, flip = False):
+	        Set self.vs as PiVideoStream().start()
+	        Set self.flip as flip
+	        Set time.sleep() equal to 2.0s
+
+	    define __del__(self):
+	        self.vs.stop()
+
+	    define flip_if_needed(self, frame):
+	        if self.flip is True: then
+	            return np.flip(frame, 0)
+	        return frame
+
+	    define get_frame(self):
+	        Set frame as self.flip_if_needed(self.vs.read())
+	        Set ret, jpeg as cv2.imencode('.jpg', frame)
+	        return jpeg.tobytes()
+ 
