@@ -1,5 +1,5 @@
 # Plasbot
-To cleanse the water bodies of plastic waste both of floating and underwater nature thus leading to various benefits such as cleaner environment for the aquatic flora and fauna.
+- To cleanse the water bodies of plastic waste both of floating and underwater nature thus leading to various benefits such as cleaner environment for the aquatic flora and fauna.
 
 <h3 align="left">1.	Background of the problem</h3>
 Water is one of the most essential resources that almost every species on earth needs and should save every drop of it. But on the other hand, water pollution is increasing day by day in water bodies and it is very difficult for marine life to survive also there is less fresh water available for consumption. From a study, approximately 165 million tons of plastic wastes were estimated to be present in the oceans of the world. Typically, plastics in the oceans can degrade within a year but not completely. During this plastic degradation process, toxic chemicals like polystyrene and BPA can be released into the water causing water pollution. Wastes found in the oceans are made up of approximately 80% plastics. Hence it is needed to separate/filter water from the garbage/plastics present in it.
