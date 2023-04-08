@@ -1,5 +1,5 @@
 # Plasbot
-<h5 align="left">Aim:</h5>
+<h4 align="left">Aim:</h4>
 To cleanse the water bodies of plastic waste both of floating and underwater nature thus leading to various benefits such as cleaner environment for the aquatic flora and fauna.
 
 <h3 align="left">1.	Background of the problem</h3>
